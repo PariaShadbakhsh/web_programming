@@ -14,15 +14,49 @@ restaurantRouter.route('/category')
 
 var cats = req.query.category;
 
-    Restaurant.find({'categories_r.category_name': {$in:Array.isArray(cats) ? cats : [cats]}},
+
+        res.contentType('json');
+        res.setHeader('Access-Control-Allow-Origin','*');
+
+    Restaurant.find({'categories_r.category_name': {$in:Array.isArray(cats) ? cats : [cats]} ,
+            'address.address_area' : req.query.area },
         (err, results) => {
 
             res.send(results);
+        });
+
+
+
+
+    })
+
+
+restaurantRouter.route('/categoryCheckbox')
+    .get((req,res) => {
+
+
+        res.contentType('json');
+        res.setHeader('Access-Control-Allow-Origin','*');
+        res.send(	{
+
+            "data":
+                [
+                    {"name":	"ساندویچ"},
+                    {"name":"برگر"},
+                    {"name":"پیتزا"},
+                    {"name":"فست فود"},
+                    {"name":"کباب"}
+
+                ]
+
 
         });
 
 
+
+
     })
+
 
 
 restaurantRouter.route('/restaurants')
@@ -34,7 +68,7 @@ restaurantRouter.route('/restaurants')
 
                 res.setHeader('Access-Control-Allow-Origin','*');
                 res.send(results)
-                console.log(results);
+
             })
 
     })
@@ -80,7 +114,7 @@ restaurantRouter.route('/restaurants/create')
 
 
 
-console.log(req.body.foods[0].food_id);
+
        var newRestaurant = new Restaurant({
 
 

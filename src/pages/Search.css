@@ -1,0 +1,503 @@
+
+
+@font-face {
+    font-family: ShabnamBold;
+    src: url('../../fonts/Shabnam-Bold.ttf');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+    font-weight:bold;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url('../../fonts/Shabnam.ttf');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+
+.header-component {
+    width :100%;
+    height: 2.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin : 0 auto;
+    direction: rtl;
+    font-family: Shabnam;
+    color: #585858;
+    border-width: 0 0 .25rem;
+    border-style: solid;
+    border-image: linear-gradient(270deg,#8b00af,#d40062,#ff0613) 1;
+
+
+
+}
+
+
+.verticalLine{
+    border-left: 2px solid #cbcbcb;
+    height: 2rem;
+
+}
+
+.logo-img{
+
+    width:10%;
+    height:2.5rem;
+    display: flex;
+    position: relative;
+    right:55rem;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+
+
+
+}
+
+.text-header {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+.header-img {
+
+    width:100%;
+    height:10rem;
+    background-image: url(../../pictures/restaurant-header.jpg);
+    background-position:50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+
+.rest-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width:100%;
+    direction: rtl;
+    background-color: #fafafa;
+
+
+}
+
+
+.div-whole {
+
+    width : 50rem;
+    min-height : 40rem;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+
+
+
+
+}
+
+.div-side-bar {
+
+    height: auto;
+    width:12rem;
+    margin: 0 2rem;
+    border: 1px solid #e2e2e2;
+    border-radius: .5rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: Shabnam;
+    font-size: 1rem;
+
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: dimgrey;
+    font-family: Shabnam;
+    font-size: 0.8rem;
+}
+
+
+
+.filter-label {
+    width:100%;
+    border-bottom: 1px solid #e2e2e2;
+}
+.search-category{
+
+    width:100%;
+    height:3.5rem;
+    display:flex;
+    justify-content:center;
+
+
+}
+.search-category-input {
+
+
+    width:90%;
+    height:2rem;
+    border-radius: .5rem;
+    border: 1px solid #e7e7e7;
+    outline: none;
+    cursor: text;
+    background-color: #fafafa;
+    margin : 0.6rem auto;
+}
+
+.categories-div {
+    width:95%;
+    min-height: 4rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+
+}
+
+.cat-box {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: .1rem solid #eee;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+    padding: 0 0.3rem;
+
+
+}
+
+.checkbox-input {
+
+   position: relative;
+    right:0.2rem;
+
+
+}
+
+
+
+.label-checkbox {
+
+    width:1rem;
+    height:1rem;
+    background: #fff;
+    border-radius: .3rem;
+    border: .1rem solid #cbcbcb;
+    cursor: pointer;
+    position: relative;
+    z-index: -1;
+
+
+
+}
+
+.cat_num {
+
+    width:80%;
+    height: 100%;
+    color: #202020;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.cat-text {
+    display: inline-block;
+
+}
+
+
+
+
+.container {
+    height:  12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    direction: rtl;
+
+
+
+
+}
+
+.box-rest{
+
+    width: 15rem;
+    height:auto;
+    border-radius:0.2em;
+    border:.1rem solid transparent;
+    margin-right: 0.6rem;
+    margin-left: 0.6rem;
+    cursor:pointer;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    box-shadow:0 0 .4rem rgba(0,0,0,.12);
+
+}
+.box-rest:hover{
+    
+    box-shadow: 0 .3rem 2rem rgba(0,0,0,.2);
+    transition: box-shadow .3s,-webkit-box-shadow .3s;
+}
+
+.info-rest {
+    width:100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    font-family: Shabnam;
+
+    align-items: center;
+    font-size: 1.1rem;
+    border-bottom: .1rem solid #e2e2e2;
+    direction: rtl;
+
+}
+
+.logo-rest-div {
+    width:25%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-right:0.5rem;
+    padding-top:0.5rem;
+
+}
+
+
+
+.data-div {
+
+    width:75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+
+
+}
+
+.name-rest-div {
+    width:80%;
+    height:2rem;
+    line-height: 2rem;
+    color: #202020;
+    font-family: ShabnamBold;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.star-holder-div {
+    width:80%;
+    height:1.8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+
+}
+
+
+
+
+.list-items{
+    width:90%;
+    height:1.5rem;
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 0.5rem;
+    font-family: Shabnam;
+    direction: rtl;
+
+
+
+
+}
+
+.one-list-item {
+    max-width:27%;
+    height:1rem;
+    font-family: Shabnam;
+    color: #4a4a4a;
+    margin: auto 0.1rem;
+
+
+
+
+
+}
+
+.one-list-item::after {
+
+
+    content: "";
+    display: inline-block;
+    width: .3rem;
+    height: .3rem;
+    background-color: #4a4a4a;
+    border-radius: 0.2rem;
+    margin: 0 0.1rem;
+
+
+
+}
+
+
+.one-list-item:last-child::after {
+
+    display: none;
+
+}
+
+
+
+
+.category-food-items{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.rest-address{
+    width:100%;
+    height: 2rem;
+    font-family:Shabnam;
+    color: #777;
+    font-size: 0.6rem;
+
+
+}
+
+.rest-address::after{
+    content: "";
+    display: block;
+    background: linear-gradient(100deg,#fff 20%,hsla(0,0%,100%,0));
+    width: 1.5rem;
+
+}
+
+.button-wrap {
+    width:100%;
+    height: 3rem;
+    display: flex;
+    align-items: flex-end;
+    background-color: #fafafa;
+}
+
+.order-button-div {
+    width:100%;
+    height:3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.order-button:hover{
+    background-color: rgba(212,0,98,.05) !important;
+}
+
+.order-button{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:15rem;
+    min-height: 2rem;
+    cursor: pointer;
+    min-width: 10rem;
+    border: .1rem solid #d40062 !important;
+    background: transparent !important;
+    color: #d40062 !important;
+    padding: .4rem 0 !important;
+    text-align: center;
+    margin:0.6rem auto;
+    font-family:Shabnam;
+}
+
+
+.only-text-info {
+    width:40%;
+    height: 2rem;
+    margin-right:15rem;
+   
+}
+
+.search-bar-div{
+    width:100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    direction: rtl;
+}
+
+.search-bar-input {
+    width:30rem;
+    height: 2rem;
+    border: .1rem solid #e2e2e2;
+    border-radius: .2rem;
+    text-align:right;
+    font-family: Shabnam;
+    margin-right: 15rem;
+    background-color: rgb(250, 250, 250);
+    padding-right: 2rem;
+
+}
+
+.label-input {
+    position: relative;
+    left : 30rem;
+    font-family: Shabnam;
+    font-size: 0.8rem;
+    color: #b7b7b7;
+    display: flex;
+    cursor: text;
+    pointer-events: none
+
+}
+
+ input:focus  ~ .label-input
+ {
+    top:-2rem;
+     font-size: 0.7rem;
+
+
+}
+
+input:focus  ~ .faSearch-icon {
+    position: relative;
+    left:42rem;
+    font-size: 0.8rem;
+
+}
+input:not(focus)  ~ .faSearch-icon {
+    position: relative;
+    left:43.5rem;
+    font-size: 0.8rem;
+
+}
+
+.link-router {
+    text-decoration: none;
+
+}
+
+
+

@@ -1,0 +1,23 @@
+
+
+
+@font-face {
+    font-family: ShabnamBold;
+    src: url('../../fonts/Shabnam-Bold.ttf');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+    font-weight:bold;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url('../../fonts/Shabnam.ttf');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+
+
+.header2-img {
+
+    width:100%;
+    height:16rem;
+    background-size: cover;
+    background: url(../../pictures/header2.jpeg) no-repeat ;
+}

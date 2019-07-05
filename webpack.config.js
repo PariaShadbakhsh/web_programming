@@ -2,9 +2,10 @@
 
 
 const path = require("path");
+const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-    const getFilesFromDir = require("./config/files");
-    const PAGE_DIR = path.join("src", "pages", path.sep);
+const getFilesFromDir = require("./config/files");
+const PAGE_DIR = path.join("src", "pages", path.sep);
 
 const htmlPlugins = getFilesFromDir(PAGE_DIR, [".html"]).map( filePath => {
     const fileName = filePath.replace(PAGE_DIR, "");
@@ -17,10 +18,10 @@ const htmlPlugins = getFilesFromDir(PAGE_DIR, [".html"]).map( filePath => {
 });
 
 
-    const entry = getFilesFromDir(PAGE_DIR, [".js"]).reduce( (obj, filePath) => {
-        const entryChunkName = filePath.replace(path.extname(filePath), "").replace(PAGE_DIR, "");
-        obj[entryChunkName] = `./${filePath}`;
-        return obj;
+const entry = getFilesFromDir(PAGE_DIR, [".js"]).reduce( (obj, filePath) => {
+    const entryChunkName = filePath.replace(path.extname(filePath), "").replace(PAGE_DIR, "");
+    obj[entryChunkName] = `./${filePath}`;
+    return obj;
 }, {});
 
 module.exports = (env, argv) => ({  entry: entry,
@@ -30,7 +31,12 @@ module.exports = (env, argv) => ({  entry: entry,
     },
     devtool: argv.mode === 'production' ? false : 'eval-source-maps',
     plugins: [
-        ...htmlPlugins
+        ...htmlPlugins,
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
     ],
 
 
@@ -42,15 +48,15 @@ module.exports = (env, argv) => ({  entry: entry,
         }
 
 
-},
+    },
     devServer: {    contentBase: path.join(__dirname,'src')  },
     module: {    rules: [
 
-     {   test: /\.(js|jsx)$/,   exclude: /node_modules/,
+            {   test: /\.(js|jsx)$/,   exclude: /node_modules/,
 
-         use: {
-             loader:"babel-loader",
-         },   },
+                use: {
+                    loader:"babel-loader",
+                },   },
 
 
             {

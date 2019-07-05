@@ -4,9 +4,11 @@ import './index.css';
 import {faSearch} from  '@fortawesome/free-solid-svg-icons';
 import  { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from '@material-ui/core/Button';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link ,Redirect } from 'react-router-dom';
 import Search from "./Search";
 import Home from "./Home";
+import  Restaurant from "./Restaurant"
+
 
 
 
@@ -18,18 +20,23 @@ class App extends Component{
 
     render() {
         return (
+            <Router>
 
-            <div>
-<Router>
-                <Link to={"/home"}>home </Link>
 
-                <Switch>
+
+
+
+                <Route path='/' >
+                    <Redirect to="/home" />
                     <Route  path='/home' component={Home} />
                     <Route path='/rest' component={Search} />
-                </Switch>
+                    <Route path='/restpage' component={Restaurant} />
 
-</Router>
-            </div>
+                </Route>
+
+
+            </Router>
+
 
 
         )
@@ -37,5 +44,5 @@ class App extends Component{
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('index-div'));
+ReactDOM.render(<App />, document.getElementById('sr'));
 export default App;
