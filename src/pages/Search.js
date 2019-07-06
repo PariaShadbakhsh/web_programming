@@ -16,6 +16,7 @@ import $ from 'jquery';
 import axios from 'axios';
 import qs from 'qs';
 import Restaurant from "./Restaurant"
+import "./index.css"
 
 
 
@@ -247,11 +248,6 @@ var Search = createClass({
 
 
         return  items.map(item =>  {
-
-
-
-
-
             return (
 
 
@@ -268,7 +264,7 @@ var Search = createClass({
                         <div className={"info-rest"}>
                             <div className={"logo-rest-div"}>
 
-                                <img  width={"70%"} height={"60%"} />
+                               <img src={item.logo} width={"90%"} height={"70%"} />
 
                             </div>
 
@@ -323,10 +319,12 @@ var Search = createClass({
         this.fetchApi();
 
         if(this.state.checkedItems.length === 0 ){
-            alert("none");
+
             this.fetchApi();
 
         }
+
+
 
 
 
@@ -350,12 +348,13 @@ var Search = createClass({
             var newDateClose = date2.getHours();
 
 
-            if (current_time > newDateClose &&
+
+            if (current_time > newDateClose ||
                 current_time < newDateOpen ) {
-                alert("closed");
+
                 this.setState({
                     boxStyle :{
-                        backgroundColor: 'grey'
+                        backgroundColor: '#b7b7b7'
                     },
                 });
             }
@@ -416,6 +415,106 @@ var Search = createClass({
                         {this.createBoxes(this.state.items)}
                     </div>
 
+                </div>
+
+                <div className="final-part">
+                    <div className="middle-part-container">
+                        <div className="content-box">
+                            <div className="right-content">
+                                <span className="empty-space" />
+                                <p className="note-text">
+                                    مراقبت و محافظت از حساب کاربری و رمزعبور هر کاربر بر عهده کاربر است. ریحون سریعترین راه سفارش آنلاین غذا است. منوی عکس‌دار رستوران‌های اطرافتان را بر اساس مکان خود به راحتی مشاهده کنید و سفارش دهید.
+                                </p>
+                                <a className="list-rest-link">لیست رستوران ها</a>
+                            </div>
+                            <div className="extra-div">
+                                <div className="left-content">
+                                    <ul className="column1  first-pseudo">
+                                        <li className="mobile-application-text">اپلیکیشن های موبایل</li>
+                                        <li>
+                                            <div className="download-app-column">
+                                                <ul>
+                                                    <li className="google-play">
+                                                        <a />
+                                                    </li>
+                                                    <li className="ios-reyhoon">
+                                                        <a />
+                                                    </li>
+                                                    <li className="bazar">
+                                                        <a />
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul className="column1 second-pseudo">
+                                        <li className="mobile-application-text">پشتیبانی ریحون</li>
+                                        <li><a>سوالات متداول</a></li>
+                                        <li><a>تماس با پشتیبانی</a></li>
+                                        <li><a>قوانین و مقررات</a></li>
+                                    </ul>
+                                    <ul className="column1 third-pseudo">
+                                        <li className="mobile-application-text">رستوران ها</li>
+                                        <li><a>ثبت رستوران</a></li>
+                                    </ul>
+                                    <ul className="column1 fourth-pseudo">
+                                        <li className="mobile-application-text">تماس با ریحون</li>
+                                        <li><a>درباره ریحون</a></li>
+                                        <li><a>تماس با ما</a></li>
+                                        <li><a>وبلاگ ریحون</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="two-logo-container">
+                        <div className="logo-content">
+                            <div className="logo-inner-photos">
+                                <div className="logo-pic">
+                                    <img src={require("../../pictures/logo2.png")} />
+                                </div>
+                                <div className="logo-pic">
+                                    <img src={require("../../pictures/logo1.png")} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="footer-container">
+                        <div className="footer-content">
+                            <ul className="icons-container">
+                                <li>
+                                    <a>
+                    <span className="icon-span">
+                      <i className="fab fa-telegram-plane" />
+                    </span>
+                                    </a>
+                                </li>
+                                <li><a>
+                    <span className="icon-span">
+                      <i className="fab fa-facebook-f" />
+                    </span>
+                                </a></li>
+                                <li><a>
+                    <span className="icon-span">
+                      <i className="fab fa-twitter" />
+                    </span>
+                                </a></li>
+                                <li><a>
+                    <span className="icon-span">
+                      <i className="fab fa-instagram" />
+                    </span>
+                                </a></li>
+                                <li><a>
+                    <span className="icon-span">
+                      <i className="fab fa-google-plus-g" />
+                    </span>
+                                </a></li>
+                            </ul>
+                            <p className="copyright-note">
+                                © 2017, <a>Reyhoon</a>, All Rights Reserved.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
 

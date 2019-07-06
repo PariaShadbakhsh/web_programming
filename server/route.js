@@ -185,6 +185,8 @@ var i;
 restaurantRouter.route('/restaurants/:id')
     .get((req, res) => {
         Restaurant.find({id : req.params.id}, (err, p) => {
+            res.contentType('json');
+            res.setHeader('Access-Control-Allow-Origin','*');
             res.send(p)
         })
     })
